@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of AI - Interactive Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfcfc;
+        }
+        .card-transition {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-transition:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-6xl mx-auto">
+        <h1 class="text-3xl font-bold text-center mb-12 text-gray-800">Types of Artificial Intelligence</h1>
+
+        <!-- Main Container -->
+        <div class="relative flex flex-col items-center gap-12">
+            
+            <!-- Root Topic -->
+            <div onclick="showDetails('Artificial Intelligence', 'The broad field of computer science dedicated to creating systems capable of performing tasks that typically require human intelligence, such as visual perception, speech recognition, decision-making, and translation.')" 
+                 class="w-full max-w-md bg-indigo-50 border-2 border-indigo-200 rounded-xl p-6 text-center cursor-pointer card-transition border-b-4 border-b-indigo-400">
+                <h2 class="text-xl font-bold text-indigo-800">Artificial Intelligence</h2>
+                <p class="text-indigo-600 text-sm mt-1">The broad field of machine intelligence</p>
+            </div>
+
+            <!-- First Level Groups -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+                
+                <!-- Discriminative AI -->
+                <div class="space-y-6">
+                    <div onclick="showDetails('Discriminative AI', 'Focuses on classifying data and making predictions. It learns the boundaries between different data points to determine which category a piece of data belongs to.')" 
+                         class="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-4 text-center cursor-pointer card-transition border-b-4 border-b-emerald-400">
+                        <h3 class="font-bold text-emerald-800">Discriminative AI</h3>
+                        <p class="text-emerald-600 text-xs">Classifies and Predicts</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div onclick="showDetails('Image Recognition', 'Identifies objects, people, or scenes within images and videos. Used in facial recognition and medical imaging.')" 
+                             class="bg-emerald-50 border border-emerald-100 rounded-lg p-3 text-center cursor-pointer card-transition text-xs">
+                            <span class="font-semibold block text-emerald-800">Image Recognition</span>
+                            <span class="text-emerald-500">Photos, scans</span>
+                        </div>
+                        <div onclick="showDetails('Text Classification', 'Categorizes text into organized groups. Common uses include spam detection, sentiment analysis, and language identification.')" 
+                             class="bg-emerald-50 border border-emerald-100 rounded-lg p-3 text-center cursor-pointer card-transition text-xs">
+                            <span class="font-semibold block text-emerald-800">Text Classification</span>
+                            <span class="text-emerald-500">Spam, sentiment</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Generative AI -->
+                <div class="space-y-6">
+                    <div onclick="showDetails('Generative AI', 'A type of AI that can create new content, such as text, images, audio, or video, based on patterns it has learned from existing data.')" 
+                         class="bg-rose-50 border-2 border-rose-200 rounded-xl p-4 text-center cursor-pointer card-transition border-b-4 border-b-rose-400">
+                        <h3 class="font-bold text-rose-800">Generative AI</h3>
+                        <p class="text-rose-600 text-xs">Creates New Content</p>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div onclick="showDetails('LLMs (Large Language Models)', 'AI models trained on vast amounts of text to understand and generate human-like language. Examples: GPT-4, Claude, Llama.')" 
+                             class="bg-rose-50 border border-rose-100 rounded-lg p-2 text-center cursor-pointer card-transition text-[10px]">
+                            <span class="font-semibold block text-rose-800">LLMs</span>
+                            <span class="text-rose-500">GPT, Claude</span>
+                        </div>
+                        <div onclick="showDetails('Image Generation', 'Creates realistic images or artwork from text descriptions (prompts).')" 
+                             class="bg-rose-50 border border-rose-100 rounded-lg p-2 text-center cursor-pointer card-transition text-[10px]">
+                            <span class="font-semibold block text-rose-800">Image</span>
+                            <span class="text-rose-500">Midjourney</span>
+                        </div>
+                        <div onclick="showDetails('Audio/Video', 'Generates synthetic voices, original music compositions, or video clips from text or simple sketches.')" 
+                             class="bg-rose-50 border border-rose-100 rounded-lg p-2 text-center cursor-pointer card-transition text-[10px]">
+                            <span class="font-semibold block text-rose-800">Audio/Video</span>
+                            <span class="text-rose-500">Suno, Sora</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Decision-making AI -->
+                <div class="space-y-6">
+                    <div onclick="showDetails('Decision-making AI', 'Systems designed to choose the best actions or items to achieve a specific goal, often based on complex datasets.')" 
+                         class="bg-amber-50 border-2 border-amber-200 rounded-xl p-4 text-center cursor-pointer card-transition border-b-4 border-b-amber-400">
+                        <h3 class="font-bold text-amber-800">Decision-making AI</h3>
+                        <p class="text-amber-600 text-xs">Chooses Actions or Items</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div onclick="showDetails('Recommendation Systems', 'Algorithms that predict user preferences and suggest items. Seen on platforms like Netflix, Spotify, and Amazon.')" 
+                             class="bg-amber-50 border border-amber-100 rounded-lg p-3 text-center cursor-pointer card-transition text-xs">
+                            <span class="font-semibold block text-amber-800">Recommendation Systems</span>
+                            <span class="text-amber-500">Netflix, Spotify</span>
+                        </div>
+                        <div onclick="showDetails('Reinforcement Learning', 'A training method based on rewarding desired behaviors and punishing undesired ones to learn optimal strategies.')" 
+                             class="bg-amber-50 border border-amber-100 rounded-lg p-3 text-center cursor-pointer card-transition text-xs">
+                            <span class="font-semibold block text-amber-800">Reinforcement Learning</span>
+                            <span class="text-amber-500">Games, robotics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section: Learning Approaches -->
+            <div class="w-full mt-8">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="h-px flex-1 bg-gray-200 border-dashed border-t-2"></div>
+                    <span class="text-gray-500 text-sm font-medium">Underlying Learning Approaches</span>
+                    <div class="h-px flex-1 bg-gray-200 border-dashed border-t-2"></div>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div onclick="showDetails('Supervised Learning', 'Training a model on a labeled dataset, where the algorithm knows the correct answer for each input.')" class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center cursor-pointer card-transition">
+                        <span class="block font-bold text-blue-800 text-sm">Supervised Learning</span>
+                        <span class="text-blue-500 text-[10px]">Labeled training data</span>
+                    </div>
+                    <div onclick="showDetails('Unsupervised Learning', 'Analyzing unlabeled data to find hidden patterns or structures without prior knowledge of categories.')" class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center cursor-pointer card-transition">
+                        <span class="block font-bold text-blue-800 text-sm">Unsupervised Learning</span>
+                        <span class="text-blue-500 text-[10px]">Finds hidden patterns</span>
+                    </div>
+                    <div onclick="showDetails('Reinforcement Learning', 'The agent learns to make decisions by performing actions in an environment to maximize some notion of cumulative reward.')" class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center cursor-pointer card-transition">
+                        <span class="block font-bold text-blue-800 text-sm">Reinforcement Learning</span>
+                        <span class="text-blue-500 text-[10px]">Learns via reward</span>
+                    </div>
+                    <div onclick="showDetails('Deep Learning', 'A subset of machine learning based on artificial neural networks with multiple layers to model complex relationships in data.')" class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center cursor-pointer card-transition">
+                        <span class="block font-bold text-blue-800 text-sm">Deep Learning</span>
+                        <span class="text-blue-500 text-[10px]">Neural networks</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section: Real-world Examples -->
+            <div class="w-full">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="h-px flex-1 bg-gray-200 border-dashed border-t-2"></div>
+                    <span class="text-gray-500 text-sm font-medium">Real-world Examples</span>
+                    <div class="h-px flex-1 bg-gray-200 border-dashed border-t-2"></div>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div onclick="showDetails('Fraud Detection', 'Using AI to identify suspicious patterns in banking and financial transactions to prevent theft.')" class="bg-stone-50 border border-stone-200 rounded-lg p-4 text-center cursor-pointer card-transition">
+                        <span class="block font-bold text-stone-700 text-sm">Fraud Detection</span>
+                        <span class="text-stone-500 text-[10px]">Banking, payments</span>
+                    </div>
+                    <div onclick="showDetails('Self-driving Cars', 'Vehicles that use sensors and AI to navigate and drive safely without direct human input.')" class="bg-stone-50 border border-stone-200 rounded-lg p-4 text-center cursor-pointer card-transition">
+                        <span class="block font-bold text-stone-700 text-sm">Self-driving Cars</span>
+                        <span class="text-stone-500 text-[10px]">Tesla, Waymo</span>
+                    </div>
+                    <div onclick="showDetails('Medical Diagnosis', 'AI analyzing patient data and medical images to assist doctors in identifying diseases like cancer more accurately.')" class="bg-stone-50 border border-stone-200 rounded-lg p-4 text-center cursor-pointer card-transition">
+                        <span class="block font-bold text-stone-700 text-sm">Medical Diagnosis</span>
+                        <span class="text-stone-500 text-[10px]">Radiology, pathology</span>
+                    </div>
+                    <div onclick="showDetails('Virtual Assistants', 'AI-powered agents that use natural language processing to help users with tasks. Examples: Siri, Alexa, ChatGPT.')" class="bg-stone-50 border border-stone-200 rounded-lg p-4 text-center cursor-pointer card-transition">
+                        <span class="block font-bold text-stone-700 text-sm">Virtual Assistants</span>
+                        <span class="text-stone-500 text-[10px]">Siri, Alexa, ChatGPT</span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-gray-400 text-sm italic mt-4">Tap any box to explore further</p>
+        </div>
+    </div>
+
+    <!-- Info Modal -->
+    <div id="modal" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-2xl max-w-md w-full p-8 shadow-2xl relative animate-in fade-in zoom-in duration-200">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
+            <h2 id="modalTitle" class="text-2xl font-bold mb-4 text-gray-800"></h2>
+            <p id="modalDescription" class="text-gray-600 leading-relaxed mb-6"></p>
+            <button onclick="closeModal()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl transition">Got it</button>
+        </div>
+    </div>
+
+    <script>
+        function showDetails(title, description) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDescription').innerText = description;
+            document.getElementById('modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
